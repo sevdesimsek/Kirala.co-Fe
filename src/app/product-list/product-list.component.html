@@ -4,22 +4,17 @@
           <table class="table table-image">
             <thead>
               <tr>
-                <th scope="col">product</th>
                 <th scope="col">Image</th>
                 <th scope="col">Article Name</th>
-                <th scope="col">owner</th>
                 <th scope="col">Price</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let item of data">
-                <th scope="row">1</th>
-                <td class="w-25">
-                    <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg" class="img-fluid img-thumbnail" alt="Sheep">
-                </td>
-                <td>Bootstrap 4 CDN and Starter Template</td>
-                <td>{{item.name}}</td>
-                <td>913</td>
+              <tr *ngFor="let item of productDataList">
+                <td>{{item.fotograf}}</td>
+                <td>{{item.aciklama}}</td>
+                <td>{{item.fiyat}}</td>
+
                 <button type="button" class="btn btn-outline-warning" routerLink="/productProfil" routerLinkActive="active-button">Rent it!</button>
               </tr>
             </tbody>
@@ -27,3 +22,7 @@
       </div>
     </div>
   </div>
+
+
+
+  

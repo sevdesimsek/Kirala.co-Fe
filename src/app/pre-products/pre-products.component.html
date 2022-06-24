@@ -1,43 +1,47 @@
-<form class="form-container">
+<div class="form-container">
   <div class="input-group mb-3">
 
 
-    <label class="input-group-text" for="inputGroupSelect01">Başlangıç Tarihi</label>
+    <label class="input-group-text" for="inputGroupSelect01" >Başlangıç Tarihi</label>
 
-    <input type="date">
+    <input type="date" [(ngModel)]="date">
 
     <label class="input-group-text" for="inputGroupSelect01">Bitiş Tarihi </label>
-    <input type="date">
+    <input type="date" [(ngModel)]="date">
 
 
     <div class="input-group mb-3">
-      <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
-        <!-- <option selected>Default</option> -->
+      <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon" [(ngModel)]="il">
+        <option selected>Default</option>
         <option *ngFor="let item of cityDataList">{{item.il}}</option>
       </select>
       <label class="input-group-text" for="inputGroupSelect03"> Adres Seçiniz </label>
     </div>
 
-    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-      <option selected>Ürün Seçiniz</option>
-      <option id="{{item.name}}" *ngFor="let item of productTypeList" [(ngModel)]="productTypeList">{{item.name}}</option>
-    </select>
+    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" [(ngModel)]="category">
+      <option selected>Kategori Seçiniz</option>
+      <option *ngFor="let item of productDataList" >{{item.kategori}}</option>
 
-    <a class="btn btn-outline-secondary" style="margin-right: 10px;" (click)="onAdd()">Ürün Seç</a>
+    </select>
+    <!-- id="{{item.name}}"  -->
+
+    <a>
+      <button class="btn btn-outline-secondary" style="margin-right: 10px;" (click)="onAdd()">Kategori Seçiniz</button>
+    </a>
     <button class="btn btn-outline-secondary" type="button" routerLink="/productList"
       routerLinkActive="active-button">Ara</button>
 
   </div>
-</form>
+</div>
 
 <div class="card-group">
   <div class="card">
     <img src="../assets/ARABA.jpg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Araç Kiralama</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat.</p>
+      <p class="card-text">Kirala.co ile dünya çapında 5000'den fazla araç kiralama lokasyonunu ziyaret ederek dünyaya 
+        açılmak mümkün. Yoğun bir günde ihtiyacınız olan küçük bir arabadan, aileniz ile 
+        eşsiz tatil deneyimleri yaşayacağınız SUV araçlara kadar.</p>
 
     </div>
   </div>
@@ -45,9 +49,9 @@
     <img src="../assets/elektronik-cihaz-zarar-veren-6-o.jpg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Elektronik Cihaz Kiralama</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat.</p>
+      <p class="card-text">Telefondan robot süpürgeye ihtiyacın olan ürünü istediğin süre boyunca kolayca kirala.
+        Ön ödeme yok, kira bedelinin tamamını kartından çekmek yok, ilave masraflar yok.
+        Kullandığın ürünü istediğin zaman yenisiyle değiştirebilirsin.</p>
 
     </div>
   </div>
@@ -55,9 +59,8 @@
     <img src="../assets/kolle.png" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Ev ve Ofis Kiralama</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat.</p>
+      <p class="card-text">Kiralık daireler ve ofis malzemeleri arasında istediğiniz özellikleri bulmak, birçok kişi için zorlu bir süreç olabilir. 
+        Kiralık daire fiyatlarındaki geniş yelpaze ve evlerin özellikleri, ofis malzemeleri noktasındaki çeşitlilik seçim yapmanızı kolaylaştıracaktır.</p>
 
     </div>
   </div>

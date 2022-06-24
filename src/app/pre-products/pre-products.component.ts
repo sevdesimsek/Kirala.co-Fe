@@ -1,6 +1,8 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { cityDataService } from '../services/city-data.service';
-import { ProductTypeService } from '../services/product-type.service';
+import { ProductListesiService } from '../services/product-listesi.service';
+
 
 
 @Component({
@@ -10,17 +12,20 @@ import { ProductTypeService } from '../services/product-type.service';
 })
 
 export class PreProductsComponent implements OnInit {
-
+  category:any;
+  date:any;
+  il:any;
   cityDataList: any;
-  productTypeList: any;
-  constructor(private cityData: cityDataService, private productType: ProductTypeService) {
+  productDataList: any;
+  constructor(private cityData: cityDataService, private productData: ProductListesiService) {
     cityData.cityDataService().subscribe((data) => {
       this.cityDataList = data;
       console.log(this.cityDataList);
     })
-    productType.ProductTypeService().subscribe((data) => {
-      this.productTypeList = data;
-      console.log(this.productTypeList);
+    
+    productData.ProductListesiService().subscribe((data) => {
+      this.productDataList = data;
+      console.log(this.productDataList);
     })
   }
   ngOnInit(): void {
@@ -30,8 +35,16 @@ export class PreProductsComponent implements OnInit {
   }
 
   onAdd(){
-    const body={'name':this.productTypeList,}
-    this.productType.postData(body).subscribe((data)=>alert('ekleme yapıldı'))
+    const body={
+      tarih:this.date,
+      sehir:this.il,
+      kategori:this.category,
+    };
+    
+
+    this.productData.postData(body).subscribe((data)=>{
+      console.log("deneme")
+      alert('aaaaaaa')});
 
     }
 
