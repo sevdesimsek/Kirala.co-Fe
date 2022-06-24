@@ -11,6 +11,10 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductProfilComponent } from './product-profil/product-profil.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { PayMethodComponent } from './pay-method/pay-method.component';
+import { KullaniciUrunleriComponent } from './kullanici-urunleri/kullanici-urunleri.component';
+import { KullaniciKiraladiklariComponent } from './kullanici-kiraladiklari/kullanici-kiraladiklari.component';
+import { HttpClientModule }from '@angular/common/http';
+// import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +26,15 @@ import { PayMethodComponent } from './pay-method/pay-method.component';
     ProductListComponent,
     ProductProfilComponent,
     UserProfileComponent,
-    PayMethodComponent
+    PayMethodComponent,
+    KullaniciUrunleriComponent,
+    KullaniciKiraladiklariComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+    // FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

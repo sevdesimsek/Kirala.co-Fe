@@ -22,10 +22,7 @@
 
 <div class="input-group mb-3">
   <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
-    <option selected>Adres seçiniz</option>
-    <option value="1">İstanbul</option>
-    <option value="2">Ankara</option>
-    <option value="3">Bursa</option>
+    <option *ngFor="let item of cityDataList">{{item.il}}</option>  
   </select>
   <label class="input-group-text" for="inputGroupSelect03">Options</label> 
 </div>
@@ -37,6 +34,6 @@
     <option value="2">Two</option>
     <option value="3">Three</option>
   </select>
-  <button class="btn btn-outline-secondary" type="button" routerLink="/productList" routerLinkActive="active-button">Search</button>
+  <button class="btn btn-outline-secondary"  type="button" routerLink="/productList" routerLinkActive="active-button">Search</button>
 </div>
 </form>

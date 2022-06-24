@@ -19,7 +19,6 @@
     max-width: 90% ;
     margin: 30px  auto;
   }
-  
 .form-select{
   font-weight: bold;
   font-size: 15px;
@@ -27,8 +26,6 @@
   color: rgb(139, 81, 49);
 }
 .form-container{
-  max-width: 55% ;
-  margin:  auto;
+  max-width: 50% ;
+  margin: 100px auto;
 }
-
- 

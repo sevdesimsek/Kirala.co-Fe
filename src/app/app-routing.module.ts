@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { KullaniciKiraladiklariComponent } from './kullanici-kiraladiklari/kullanici-kiraladiklari.component';
+import { KullaniciUrunleriComponent } from './kullanici-urunleri/kullanici-urunleri.component';
 import { PayMethodComponent } from './pay-method/pay-method.component';
 import { PreProductsComponent } from './pre-products/pre-products.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -13,8 +15,9 @@ const routes: Routes = [
   {path:"productList",component:ProductListComponent},  
   {path:"productProfil", component:ProductProfilComponent},
   {path:"payMethod", component:PayMethodComponent},
-  {path:"userProfil", component:UserProfileComponent}
-  
+  {path:"userProfil", component:UserProfileComponent},
+  {path:"kullaniciUrunleri", component:KullaniciUrunleriComponent},
+  {path:"kullaniciKiraladiklari", component:KullaniciKiraladiklariComponent}
   
 ];
 
