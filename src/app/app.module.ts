@@ -14,7 +14,8 @@ import { PayMethodComponent } from './pay-method/pay-method.component';
 import { KullaniciUrunleriComponent } from './kullanici-urunleri/kullanici-urunleri.component';
 import { KullaniciKiraladiklariComponent } from './kullanici-kiraladiklari/kullanici-kiraladiklari.component';
 import { HttpClientModule }from '@angular/common/http';
-// import {FormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -33,8 +34,8 @@ import { HttpClientModule }from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-    // FormsModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

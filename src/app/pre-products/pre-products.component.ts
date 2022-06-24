@@ -28,7 +28,15 @@ export class PreProductsComponent implements OnInit {
   getProductFromData(data:any){
     console.warn(data)
   }
-}
+
+  onAdd(){
+    const body={'name':this.productTypeList,}
+    this.productType.postData(body).subscribe((data)=>alert('ekleme yapıldı'))
+
+    }
+
+  }
+
 
 
 
