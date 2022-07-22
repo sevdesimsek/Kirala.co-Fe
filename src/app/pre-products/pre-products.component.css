@@ -1,24 +1,23 @@
 
+    .card-group {
+    margin-bottom: 10px;
+    max-width: 90% ;
+    margin: 40px  auto;
+  } 
   .card-title {
     font-weight: bold;
     margin-bottom: 10px;
     color: rgb(139, 81, 49);
   }
-  .card {
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: normal;
-    color: rgb(218, 142, 101);
-    margin: auto;
+ 
+ .card-text{
+  font-size: 18px;
+  font-weight: normal;
+  color: rgb(218, 142, 101);
+  margin: auto;
+    
+  }
 
-  }
-  .card-group {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: rgb(139, 81, 49);
-    max-width: 90% ;
-    margin: 30px  auto;
-  }
 .form-select{
   font-weight: bold;
   font-size: 15px;
@@ -27,5 +26,5 @@
 }
 .form-container{
   max-width: 50% ;
-  margin: 100px auto;
+  margin: 100px    auto;
 }

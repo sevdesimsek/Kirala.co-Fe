@@ -1,5 +1,5 @@
 
-
+/* 
 .card{
   width: 400px;
   border: none;
@@ -21,4 +21,7 @@
 }
 .number3{
   font-weight:500;
+} */
+h4{
+  color: rgb(228, 171, 15);
 }
